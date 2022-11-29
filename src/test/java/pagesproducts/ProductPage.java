@@ -1,4 +1,5 @@
-package pages;
+package pagesproducts;
+
 
 import org.openqa.selenium.By;
 
@@ -10,11 +11,12 @@ public class ProductPage {
     public void selecionarProdutoMacPage(String produto) {
 
 
-
         if (produto.equalsIgnoreCase("iphone 14 pro")) {
             produto = "iphone-14-pro";
         }
-
+        if (produto.equalsIgnoreCase("iphone 14")) {
+            produto = "iphone-14";
+        }
         if (produto.equalsIgnoreCase("Macbook pro")) {
             produto = "macbook-pro";
         }
@@ -28,10 +30,27 @@ public class ProductPage {
         }
 
 
-        driver.findElement(By.xpath("//a[@href='/"+produto+"/']")).click();
+        driver.findElement(By.xpath("//a[@href='/" + produto + "/']")).click();
+
+
+
 
     }
 
+    public  void selecionarIphoneSeEmDiante(String Product) {
+        if (Product.equalsIgnoreCase("iPhone 13")) {
+            Product = "iPhone 13";
+
+        }
+        if (Product.equalsIgnoreCase("iPhone 12")) {
+            Product = "iPhone 12";
+
+        }
+        if (Product.equalsIgnoreCase("iPhone SE")) {
+            Product = "iPhone SE";
+
+
+        }
+        driver.findElement(By.xpath("(//span[text()='"+Product+"'])[1]")).click();
+    }
 }
-
-
