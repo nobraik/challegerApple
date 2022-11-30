@@ -14,6 +14,7 @@ import pagesproducts.ProductPage;
 import runner.executarTests;
 
 
+import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
 
@@ -79,40 +80,40 @@ homePage.chooseCategory("iphone");
 
 
     }
-    @Given("clicar em iphone {int} pro")
-    public void clicarEmIphonePro(Integer int1) {
+    @Given("clicar em iphone  pro")
+    public void clicarEmIphonePro() {
+
      productPage.selecionarIphoneSeEmDiante("iPhone 13");
     }
-    @Given("selecionar Iphone {int}")
-    public void selecionarIphone(Integer int1) {
+    @Given("selecionar Iphone")
+    public void selecionarIphone() {
+
 methodsWeb.btnBuyProduct(el.btntipoiphone);
 
     }
     @Given("selecionar a cor do aparelho")
-    public void selecionarACorDoAparelho()  {
-
-methodsWeb.waitElement(el.btnColor);
-
-
-
-
-
+    public void selecionarACorDoAparelho()throws Exception  {
+       TimeUnit.MILLISECONDS.sleep(2000);
+       methodsWeb.waitElement(el.btnColor);
 
     }
     @Given("clicar em select apos a escolha")
-    public void clicarEmSelectAposAEscolha()  {
-        methodsWeb.btnBuyProduct(el.Storege2);
-
+    public void clicarEmSelectAposAEscolha() throws InterruptedException {
+        TimeUnit.MILLISECONDS.sleep(2000);
+       methodsWeb.waitElement(el.Storege2);
+ TimeUnit.MILLISECONDS.sleep(2000);
         methodsWeb.waitElement(el.SelectNotrade);
-
+        TimeUnit.MILLISECONDS.sleep(2000);
         methodsWeb.waitElement(el.BuyOption);
-
+        TimeUnit.MILLISECONDS.sleep(2000);
        methodsWeb.waitElement(el.connectcarrinho);
+      TimeUnit.MILLISECONDS.sleep(2000);
      methodsWeb.waitElement(el.noApplecare);
 
     }
     @Given("clicar em add to bag de produtos")
     public void clicarEmAddToBagDeProdutos() {
+
     methodsWeb.waitElement(el.addbtnBag);
 
     }

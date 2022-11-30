@@ -19,8 +19,8 @@ Feature: Adicionar produtos na sacola de compras
   @iphone
   Scenario: Adicionar iPhone na sacola de compras do site
     Given que selecione iphone na home
-    And clicar em iphone 14 pro
-    And selecionar Iphone 14
+    And clicar em iphone  pro
+    And selecionar Iphone
     And selecionar a cor do aparelho
     And clicar em select apos a escolha
     And clicar em add to bag de produtos
