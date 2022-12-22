@@ -17,7 +17,7 @@ Feature: Adicionar produtos na sacola de compras
 
 
   @iphone
-  Scenario: Adicionar iPhone na sacola de compras do site
+  Scenario: Dictionary iPhone na sacola de compras do site
     Given que selecione iphone na home
     And clicar em iphone  pro
     And selecionar Iphone
@@ -26,3 +26,5 @@ Feature: Adicionar produtos na sacola de compras
     And clicar em add to bag de produtos
     When clicar em review bag de produto
     Then produto adicionado na bag com sucesso
+
+

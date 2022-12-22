@@ -15,7 +15,7 @@ public class Web {
     //elementos iphone
     public By btntipoiphone = By.xpath("(//span[@class='row'])[2]");
     public By btnColor = By.xpath("(//img[@class='colornav-swatch'])[1]");//pode mudar a cor por numero
-    public By Storege2= By.xpath("(//span[@class='form-selector-left-col column large-6']//span[@class='form-selector-title'])[4]");
+    public By Storege2= By.xpath("(//span[@class='column form-selector-left-col rf-bfe-selector-left-col'])[4]");
     public By SelectNotrade = By.xpath("//span[text()='No trade-in']");
 public By BuyOption = By.xpath("(//label[@class='form-selector-label rf-po-bfe-dimension-base-label'])[1]");
 

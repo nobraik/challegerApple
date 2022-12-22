@@ -7,14 +7,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
 import methods.MethodsWeb;
+
+
 
 import pagesElementsElements.Web;
 import pagesproducts.ProductPage;
 import runner.executarTests;
 
 
-import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
 
@@ -65,14 +67,36 @@ methodsWeb.btnBuyProduct(el.btnselect);
         methodsWeb.btnBuyProduct(el.reviewbtn);
     }
     @Then("produto adicionado na bag")
-    public void produtoAdicionadoNaBag()  {
-    Evidencia.takeScreen("photo product on carrinho");
-
-
+    public void produtoAdicionadoNaBag() {
+        Evidencia.takeScreen("photo product on carrinho");
 
     }
 
-  ///senario do com iphone
+
+
+
+
+
+
+    ///cenario
+
+
+
+
+
+
+    ////   ////////////////     ||||       ||||    |||||||||||||||   ||||||||||||||    ||||   |||||||||||||||||
+    ////   ////////////////     ||||       ||||    |||||||||||||||   ||||||||||||||    ||||   |||||||||||||||||
+    ////   ////        ////     ||||       ||||    ||||       ||||   |||||     ||||    ||||   ||||
+    ////   ////        ////     |||||||||||||||    ||||       ||||   |||||     ||||    ||||   |||||||||||
+    ////   ////////////////     |||||||||||||||    ||||       ||||   |||||     ||||    ||||   |||||||||||
+    ////   ////////////////     ||||       ||||    ||||       ||||   |||||     ||||    ||||   ||||
+    ////   ////                 ||||       ||||    |||||||||||||||   |||||     ||||||||||||   ||||||||||||||||
+    ////  /////                /////      ////    ///////////////    /////     ////////////   ////////////////
+
+
+
+
 
     @Given("que selecione iphone na home")
     public void queSelecioneIphoneNaHome() {
@@ -92,22 +116,26 @@ methodsWeb.btnBuyProduct(el.btntipoiphone);
 
     }
     @Given("selecionar a cor do aparelho")
-    public void selecionarACorDoAparelho()throws Exception  {
-       TimeUnit.MILLISECONDS.sleep(2000);
-       methodsWeb.waitElement(el.btnColor);
+    public void selecionarACorDoAparelho()throws Exception {
+        TimeUnit.MILLISECONDS.sleep(800);
+      methodsWeb.waitElement(el.btnColor);
 
     }
     @Given("clicar em select apos a escolha")
     public void clicarEmSelectAposAEscolha() throws InterruptedException {
-        TimeUnit.MILLISECONDS.sleep(2000);
+        TimeUnit.MILLISECONDS.sleep(900);
        methodsWeb.waitElement(el.Storege2);
- TimeUnit.MILLISECONDS.sleep(2000);
+
+ TimeUnit.MILLISECONDS.sleep(800);
         methodsWeb.waitElement(el.SelectNotrade);
-        TimeUnit.MILLISECONDS.sleep(2000);
+
+        TimeUnit.MILLISECONDS.sleep(800);
         methodsWeb.waitElement(el.BuyOption);
-        TimeUnit.MILLISECONDS.sleep(2000);
+
+        TimeUnit.MILLISECONDS.sleep(800);
        methodsWeb.waitElement(el.connectcarrinho);
-      TimeUnit.MILLISECONDS.sleep(2000);
+
+      TimeUnit.MILLISECONDS.sleep(800);
      methodsWeb.waitElement(el.noApplecare);
 
     }
