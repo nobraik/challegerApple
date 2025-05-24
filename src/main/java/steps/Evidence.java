@@ -9,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
-public class Evidencia extends DriversFectory {
+public class Evidence extends DriversFectory {
 
     public static void takeScreen(String evidecia){
         TakesScreenshot screenshot = (TakesScreenshot) driver;

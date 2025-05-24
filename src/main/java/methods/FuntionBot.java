@@ -1,8 +1,7 @@
 package methods;
 
 
-import org.junit.After;
-
+import io.cucumber.java.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -15,7 +14,7 @@ import java.time.Duration;
 
 import static driverUtils.DriversFectory.driver;
 
-public class MethodsWeb {
+public class FuntionBot {
 
     public void btnBuyProduct(By btnBuy) {
         driver.findElement(btnBuy).click();
@@ -28,12 +27,10 @@ public class MethodsWeb {
         JavascriptExecutor jsscroll = (JavascriptExecutor) driver;
         jsscroll.executeScript("window.scrollBy(" + n1 + "," + n2 + ")");
 
-
     }
         public void waitElement(By elemento){
             WebElement webElement = new WebDriverWait(driver, Duration.ofMillis(1000)).until(ExpectedConditions.elementToBeClickable(elemento));
             webElement.click();
-
 
         }
         public void asercoes() {

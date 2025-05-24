@@ -14,12 +14,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/driverUtils/features",
-        glue = "steps",
-        tags = "@iphone",
+        plugin = {"pretty", "html:target/cucumber-report.html"},
         monochrome = true,
         dryRun = false,
-        plugin = {"pretty", "html:target/cucumber-report.html"},
+        features = "src/test/resources/features",
+        glue = "steps",
+        tags = "@iphone",
+
+
         snippets = CucumberOptions.SnippetType.CAMELCASE
 
 )
